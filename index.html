@@ -96,75 +96,96 @@ document.addEventListener('DOMContentLoaded', function () {
         <h1>張惠美夫人 訃告</h1>
     </header>
 
-    <main>
-        <!-- 主要照片部分 -->
-        <section class="main-photo-section">
+      <main>
+  <!-- 主要照片部分 -->
+  <section class="main-photo-section">
     <img id="main-photo" src="image/IMG_2114.jpeg" alt="追思照片" loading="lazy">
-    <p id="life-story">
-        <strong>我們摯愛的親人 張惠美夫人</strong><br>
-        <strong>於民國114年5月25日，</strong><br>
-        <strong>上午06時48分，</strong><br>
-        <strong>安詳地走完52年的人生旅程，</strong><br>
-        <strong>留下我們永恆的追思與感恩。</strong><br><br>
-        <strong>將於民國114年6月13日 星期五 </strong><br>
-        <strong>於  台北市立殯儀館（懷愛館） </strong><br>
-        <strong>於  景行樓3F [ 至仁四廳 ］ </strong><br>
-        <strong>舉辦告別追思奠禮</strong><br><br>
-        <strong> 敬邀至親好友們蒞臨獻上哀思， </strong><br>
-        <strong> 並向您獻上最深的敬意。 </strong><br><br>
-        <strong> 感謝您的關懷與陪伴，</strong><br>
-        <strong> 家人們銘記在心，衷心感謝。 </strong><br><br>
+    
+    <div id="life-story" class="fade-in-text">
+      <strong>我們摯愛的親人 張惠美夫人</strong>
+      <strong>於民國114年5月25日，</strong>
+      <strong>上午06時48分，</strong>
+      <strong>安詳地走完52年的人生旅程，</strong>
+      <strong>留下我們永恆的追思與感恩。</strong><br><br>
 
-        <strong> 豎靈地點：台北市立殯儀館（懷愛館）</strong><br>
-        <strong> 豎靈地址：106台北市大安區辛亥路三段330號 </strong><br>
-        <strong> 出殯地點：台北市立殯儀館（懷愛館） </strong><br>
-        <strong> 出殯地址：106台北市大安區辛亥路三段330號</strong><br>
-</section>
-         <style>
+      <strong>將於民國114年6月13日 星期五</strong>
+      <strong>於 台北市立殯儀館（懷愛館）</strong>
+      <strong>於 景行樓3F [ 至仁四廳 ］</strong>
+      <strong>舉辦告別追思奠禮</strong><br><br>
 
-/* 淡入效果 */
-.fade-in-text {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
+      <strong>敬邀至親好友們蒞臨獻上哀思，</strong>
+      <strong>並向您獻上最深的敬意。</strong><br><br>
 
-@keyframes fadeIn {
-    to {
+      <strong>感謝您的關懷與陪伴，</strong>
+      <strong>家人們銘記在心，衷心感謝。</strong><br><br>
+
+      <strong>豎靈地點：台北市立殯儀館（懷愛館）</strong>
+      <strong>豎靈地址：106台北市大安區辛亥路三段330號</strong>
+      <strong>出殯地點：台北市立殯儀館（懷愛館）</strong>
+      <strong>出殯地址：106台北市大安區辛亥路三段330號</strong>
+    </div>
+  </section>
+
+  <style>
+    /* 淡入效果 */
+    .fade-in-text {
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
         opacity: 1;
+      }
     }
-}
 
-#life-story {
-    text-align: center;
-    font-size: 18px; /* 可以根据需要调整字体大小 */
-    line-height: 1.8; /* 行间距 */
-    margin: 0 auto;
-    max-width: 800px; /* 控制内容的最大宽度 */
-    padding: 20px; /* 适当增加内边距 */
-    font-family: 'Noto Serif', 'MingLiU', serif; /* 使用優雅的字體 */
-    color: #333; /* 調整文字顏色 */
-    background-color: #f9f9f9; /* 背景顏色讓文字更加突出 */
-    border-radius: 10px; /* 圓角效果 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 加上陰影效果 */
-    letter-spacing: 0.5px; /* 輕微增加字間距，讓文字更通透 */
-}
+    .main-photo-section {
+      padding: 20px;
+      text-align: center;
+    }
 
-/* 响应式设计 */
-@media (max-width: 600px) {
+    #main-photo {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
     #life-story {
-        font-size: 16px; /* 小屏幕上字体略小 */
-        padding: 15px; /* 减少内边距 */
+      text-align: center;
+      font-size: 16px;           /* 原為18px，略縮小 */
+      line-height: 1.6;          /* 原為1.8，行距緊湊 */
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 18px;
+      font-family: 'Noto Serif', 'MingLiU', serif;
+      color: #333;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      letter-spacing: 0.4px;
     }
-}
 
-@media (max-width: 400px) {
-    #life-story {
-        font-size: 14px; /* 更小屏幕上的字体大小 */
-        padding: 10px; /* 更小的内边距 */
+    #life-story strong {
+      display: block;           /* 每句變成區塊獨立一行 */
+      margin-bottom: 6px;
     }
-}
 
-</style>
+    /* 響應式調整（手機更小字） */
+    @media (max-width: 600px) {
+      #life-story {
+        font-size: 15px;
+        padding: 14px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      #life-story {
+        font-size: 13.5px;
+        padding: 10px;
+      }
+    }
+  </style>
+</main>
 
         <!-- 訃告紙本部分 -->
         <section class="paper-obituary-section">
